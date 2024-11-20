@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net7.0;net6.0;netstandard2.0;net462</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>NetSparkleUpdater.SparkleUpdater</PackageId>
+    <Version>3.0.0-preview20240915001</Version>
+    <Authors>Deadpikle, Dirk Eisenberg</Authors>
+    <Description>NetSparkleUpdater/NetSparkle is a C# .NET software update framework that allows you to easily download installer files and update your C# .NET Framework or .NET Core software. Built-in UIs are available for WinForms, WPF, and Avalonia; if you want a built-in UI, please reference a NetSparkleUpdater.UI package. You provide, somewhere on the internet, an XML appcast with software version information along with release notes in Markdown or HTML format. The NetSparkle framework then checks for an update in the background, displays the release notes to the user, and lets users download or skip the software update. The framework can also perform silent downloads so that you can present all of the UI yourself or set up your own silent software update system, as allowed by your software architecture. It was inspired by the Sparkle (https://sparkle-project.org/) project for Cocoa developers and the WinSparkle (https://winsparkle.org/) project (a Win32 port).</Description>
+    <Copyright>Copyright 2010 - 2024</Copyright>
+    <PackageProjectUrl>https://github.com/NetSparkleUpdater/NetSparkle</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NetSparkleUpdater/NetSparkle.git</RepositoryUrl>
+    <PackageTags>sparkle, netsparkle, update, software, updater</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <Product>NetSparkleUpdater.SparkleUpdater</Product>
+    <PackageIcon>software-update-available.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+    <RootNamespace>NetSparkleUpdater</RootNamespace>
+    <PackageReleaseNotes>See https://github.com/NetSparkleUpdater/NetSparkle/releases for all release information and to file issues/pull requests for this project.</PackageReleaseNotes>
+    <IsTrimmable>true</IsTrimmable>
+    <TrimMode>partial</TrimMode>
+    <IsAotCompatible>true</IsAotCompatible>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0' or '$(TargetFramework)' == 'net462'">
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net462|AnyCPU'">
+    <OutputPath>..\bin\Release\NetSparkle\</OutputPath>
+    <DocumentationFile>..\bin\Release\NetSparkle\NetSparkle.xml</DocumentationFile>
+    <DefineConstants>TRACE;NET462;NETFULL;NETFRAMEWORK</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net462|AnyCPU'">
+    <OutputPath>..\bin\Debug\NetSparkle\</OutputPath>
+    <DocumentationFile>..\bin\Debug\NetSparkle\NetSparkle.xml</DocumentationFile>
+    <DefineConstants>DEBUG;TRACE;NET462;NETFULL;NETFRAMEWORK</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <OutputPath>..\bin\Release\NetSparkle\</OutputPath>
+    <DocumentationFile>..\bin\Release\NetSparkle\NetSparkle.xml</DocumentationFile>
+    <DefineConstants>TRACE;NETCORE;NETSTANDARD</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <OutputPath>..\bin\Debug\NetSparkle\</OutputPath>
+    <DocumentationFile>..\bin\Debug\NetSparkle\NetSparkle.xml</DocumentationFile>
+    <DefineConstants>DEBUG;TRACE;NETCORE;NETSTANDARD</DefineConstants>
+  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0|AnyCPU'">
+		<OutputPath>..\bin\Release\NetSparkle\</OutputPath>
+		<DocumentationFile>..\bin\Release\NetSparkle\NetSparkle.xml</DocumentationFile>
+		<DefineConstants>TRACE;NETCORE;NET6</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+		<OutputPath>..\bin\Debug\NetSparkle\</OutputPath>
+		<DocumentationFile>..\bin\Debug\NetSparkle\NetSparkle.xml</DocumentationFile>
+		<DefineConstants>DEBUG;TRACE;NETCORE;NET6</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0|AnyCPU'">
+		<OutputPath>..\bin\Release\NetSparkle\</OutputPath>
+		<DocumentationFile>..\bin\Release\NetSparkle\NetSparkle.xml</DocumentationFile>
+		<DefineConstants>TRACE;NETCORE;NET7</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0|AnyCPU'">
+		<OutputPath>..\bin\Debug\NetSparkle\</OutputPath>
+		<DocumentationFile>..\bin\Debug\NetSparkle\NetSparkle.xml</DocumentationFile>
+		<DefineConstants>DEBUG;TRACE;NETCORE;NET7</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0|AnyCPU'">
+		<OutputPath>..\bin\Release\NetSparkle\</OutputPath>
+		<DocumentationFile>..\bin\Release\NetSparkle\NetSparkle.xml</DocumentationFile>
+		<DefineConstants>TRACE;NETCORE;NET8</DefineConstants>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0|AnyCPU'">
+		<OutputPath>..\bin\Debug\NetSparkle\</OutputPath>
+		<DocumentationFile>..\bin\Debug\NetSparkle\NetSparkle.xml</DocumentationFile>
+		<DefineConstants>DEBUG;TRACE;NETCORE;NET8</DefineConstants>
+	</PropertyGroup>
+  <!-- .NET 4.6.2 references, compilation flags and build options -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net462' ">
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="nuget\**" />
+    <EmbeddedResource Remove="nuget\**" />
+    <None Remove="nuget\**" />
+  </ItemGroup>
+  <ItemGroup>
+	<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	<None Include="..\..\UPGRADING.md" Pack="true" PackagePath="\" />
+	<None Include="ArtWork\software-update-available.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>

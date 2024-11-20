@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ApplicationIcon>software-update-available.ico</ApplicationIcon>
+    <RootNamespace>NetSparkleUpdater.Samples.Avalonia</RootNamespace>
+    <AssemblyName>NetSparkleUpdater.Samples.Avalonia</AssemblyName>
+    <PublishTrimmed>true</PublishTrimmed>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\*" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="NetSparkle_DSA.pub" />
+    <None Remove="software-update-available.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="software-update-available.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NetSparkle_DSA.pub" />
+  </ItemGroup>
+</Project>

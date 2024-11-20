@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NetSparkle_DSA.pub" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="NetSparkle_DSA.pub" />
+  </ItemGroup>
+
+</Project>

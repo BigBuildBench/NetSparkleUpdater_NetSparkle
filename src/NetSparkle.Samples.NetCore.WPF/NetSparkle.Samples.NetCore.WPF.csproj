@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net8.0-windows</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>software-update-available.ico</ApplicationIcon>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="NetSparkle_DSA.pub" />
+    <None Remove="software-update-available.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="NetSparkle_DSA.pub" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="software-update-available.ico" />
+  </ItemGroup>
+
+</Project>
